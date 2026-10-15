@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAXI HEADSHOT PRO</title>
+<style>
+:root{color-scheme:dark;--bg:#08090d;--panel:#101219;--line:#292d38;--red:#ff1736;--muted:#aab0c0;--white:#f6f7fb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font:15px/1.5 system-ui,Arial,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 5%;border-bottom:1px solid #35303a;background:#08090df2;position:sticky;top:0;z-index:5}
+.brand{font-weight:950;font-style:italic;letter-spacing:.5px}.brand span{color:var(--red)}nav{display:flex;gap:16px;flex-wrap:wrap}button,a{cursor:pointer}nav button,.ghost{background:transparent;color:#eee;border:0;font-weight:700}
+.primary{background:var(--red);border:0;color:white;padding:12px 18px;border-radius:9px;font-weight:900;box-shadow:0 0 18px #ff173633}
+.hero{padding:48px 6%;background:radial-gradient(ellipse at 72% 20%,#67101d 0,transparent 38%),linear-gradient(110deg,#090a0e,#1b080e);border-bottom:1px solid #42151f}
+.eyebrow{color:#ff6679;font-weight:900;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(34px,6vw,66px);line-height:.98;margin:12px 0;max-width:760px;font-style:italic;font-weight:1000}h1 span{color:var(--red)}.hero p{max-width:620px;color:#c4c6d0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.outline{border:1px solid #454956;background:#12141b;color:#fff;padding:12px 18px;border-radius:9px;font-weight:800}
+.wrap{padding:26px 5%;max-width:1400px;margin:auto}.features{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.card{background:linear-gradient(145deg,#12151d,#0b0c11);border:1px solid var(--line);border-radius:13px;padding:18px;min-width:0}.icon{font-size:26px;color:var(--red)}h2{font-size:21px;margin:0 0 14px}h3{font-size:14px;margin:5px 0}.muted{color:var(--muted);font-size:13px}
+.columns{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:14px;margin-top:18px}.field{width:100%;background:#080a10;border:1px solid #363b49;border-radius:8px;padding:12px;color:white;margin:6px 0 10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.stat{background:#0a0c12;border:1px solid #292e39;border-radius:9px;padding:10px}.stat b{display:block;font-size:22px;color:#fff}.stat small{color:var(--muted)}
+.tilegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.tile{padding:14px;border-radius:10px;border:1px solid #34303a;background:#171019}.tile b{display:block;color:#ff5269}
+label{display:block;color:#e6e7ed;font-size:13px;margin:13px 0 5px}input[type=range]{width:100%;accent-color:var(--red)}.rangehead{display:flex;justify-content:space-between;gap:10px}.value{color:#ff6376;font-weight:900}
+.notice{border-left:3px solid var(--red);padding:10px 12px;background:#1b0d12;color:#d8d9e0;font-size:12px;margin-top:12px}
+footer{padding:24px 5%;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:10;align-items:center;justify-content:center;padding:18px}.modalbox{max-width:400px;width:100%;background:#11141b;border:1px solid #444;border-radius:15px;padding:22px}.close{float:right;background:none;color:#fff;border:0;font-size:22px}
+@media(max-width:900px){.features{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.hero{padding:36px 5%}nav{gap:8px}header{flex-wrap:wrap}}
+@media(max-width:480px){nav{width:100%;justify-content:space-between}nav button{font-size:12px}.features{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="brand">🔺 MAXI <span>HEADSHOT PRO</span></div><nav><button onclick="go('home')">Home</button><button onclick="go('training')">Training</button><button onclick="go('sensitivity')">Sensitivity</button><button onclick="go('device')">Device Settings</button><button onclick="go('premium')">Premium</button></nav><button class="primary" onclick="openLogin()">Login / Sign up</button></header>
+<main id="home">
+<section class="hero"><div class="eyebrow">Train • Improve • Dominate</div><h1>MAXI <span>HEADSHOT PRO</span></h1><h3>FREE FIRE TRAINING & SENSITIVITY TOOLKIT</h3><p>Build steadier aim, practise drag-headshots, and tune your sensitivity with a clean gaming dashboard. Training tools only—no game cheats or automatic targeting.</p><div class="actions"><button class="primary" onclick="go('training')">START TRAINING →</button><button class="outline" onclick="go('sensitivity')">SET MY SENSITIVITY</button></div></section>
+<div class="wrap"><div class="features">
+<div class="card"><div class="icon">◎</div><h3>HEADSHOT TRAINING</h3><div class="muted">Practise on targets and build consistency.</div></div>
+<div class="card"><div class="icon">⚙</div><h3>SENSITIVITY SETTINGS</h3><div class="muted">Adjust your own profile with live sliders.</div></div>
+<div class="card"><div class="icon">▣</div><h3>DEVICE SETTINGS</h3><div class="muted">Guidance for itel A200 and other phones.</div></div>
+<div class="card"><div class="icon">▤</div><h3>HEADSHOT GUIDE</h3><div class="muted">Simple tips for drag and tracking practice.</div></div>
+<div class="card"><div class="icon">♛</div><h3>PREMIUM FEATURES</h3><div class="muted">Preview extra profiles and training modes.</div></div>
+</div>
+<div class="columns">
+<section class="card" id="login"><h2>👤 Your Training Profile</h2><p class="muted">Sign in here is a demo only; it does not create a real account.</p><label>Email or username</label><input class="field" id="username" placeholder="Enter a nickname"><button class="primary" style="width:100%" onclick="demoLogin()">Continue</button><p id="loginmsg" class="muted">Never enter your Free Fire password on a third-party site.</p><div class="notice">This demo saves your nickname and sensitivity settings only in this browser.</div></section>
+<section class="card" id="training"><h2>🎯 Headshot Training</h2><p class="muted">Tap the target as it appears. This is a simple browser practice game, not connected to Free Fire.</p><div style="background:#080b12;border:1px solid #2d3443;border-radius:12px;padding:14px;text-align:center;min-height:185px"><div id="target" style="font-size:45px;display:inline-block;cursor:pointer;padding:8px" onclick="hit()">🎯</div><p id="trainmsg" class="muted">Press Start Practice to begin.</p></div><div class="stats"><div class="stat"><small>Hits</small><b id="hits">0</b></div><div class="stat"><small>Attempts</small><b id="attempts">0</b></div><div class="stat"><small>Accuracy</small><b id="accuracy">0%</b></div></div><button class="primary" onclick="startPractice()">Start Practice</button> <button class="outline" onclick="resetPractice()">Reset</button></section>
+<section class="card" id="guide"><h2>💡 Quick Tips</h2><p>✓ Keep your crosshair near upper body level.</p><p>✓ Practise a short, controlled upward drag.</p><p>✓ Change one sensitivity setting at a time.</p><p>✓ Use Training Ground to test settings before matches.</p><div class="notice">There is no single perfect sensitivity. Start with these example values, then adjust to what feels comfortable.</div></section>
+</div>
+<div class="columns">
+<section class="card" id="sensitivity"><h2>⚙ Sensitivity Settings</h2><p class="muted">Example starting profile for itel A200. Not official or guaranteed settings.</p>
+<div id="ranges"></div><label>Profile name</label><input class="field" id="profile" value="My Sensitivity 1"><button class="primary" onclick="saveSettings()">Save Profile</button> <button class="outline" onclick="loadSettings()">Load Saved</button><p class="muted" id="savemsg"></p></section>
+<section class="card" id="device"><h2>📱 Device Settings</h2><h3>itel A200 • Starting suggestions</h3><p class="muted">Graphics: Smooth/Standard if available</p><p class="muted">High FPS: Enable only if your game offers it smoothly</p><p class="muted">Close unused apps and keep enough free storage.</p><p class="muted">Use stable network and avoid overheating while playing.</p><div class="notice">Menu names and available options can differ by game version and device.</div></section>
+<section class="card" id="premium"><h2>♛ Premium Upgrade</h2><p class="muted">A visual preview of possible premium features.</p><p>✓ More saved sensitivity profiles</p><p>✓ Additional browser practice modes</p><p>✓ Longer progress history</p><p>✓ Extra aiming guides</p><button class="primary" onclick="alert('Premium checkout is not connected in this demo. No payment has been taken.')">Preview Premium</button><div class="notice">Payments are not enabled. Do not send money until a real, secure checkout and support process are set up.</div></section>
+</div></div></main>
+<footer>MAXI HEADSHOT PRO • Independent training demo • Not affiliated with Garena Free Fire.</footer>
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeLogin()">×</button><h2>Welcome to MAXI</h2><p class="muted">Create a local demo profile with a nickname. No game login needed.</p><input class="field" id="modalname" placeholder="Choose a nickname"><button class="primary" style="width:100%" onclick="modalLogin()">Create demo profile</button><p class="muted">Never share your game password or verification code.</p></div></div>
+<script>
+const defaults=[["General",95],["Red Dot",90],["2x Scope",75],["4x Scope",65],["Sniper Scope",50],["Free Look",70]];
+const ranges=document.getElementById('ranges');
+defaults.forEach(([name,val],i)=>{const row=document.createElement('div');row.innerHTML=`<div class="rangehead"><label for="r${i}">${name}</label><span class="value" id="v${i}">${val}</span></div><input id="r${i}" type="range" min="0" max="100" value="${val}" oninput="document.getElementById('v${i}').textContent=this.value">`;ranges.appendChild(row)});
+function go(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+function openLogin(){document.getElementById('modal').style.display='flex'}function closeLogin(){document.getElementById('modal').style.display='none'}
+function modalLogin(){const n=document.getElementById('modalname').value.trim();if(!n){alert('Enter a nickname first.');return}localStorage.setItem('maxi_nickname',n);document.getElementById('username').value=n;document.getElementById('loginmsg').textContent='Demo profile ready, '+n+'!';closeLogin()}
+function demoLogin(){const n=document.getElementById('username').value.trim();if(!n){openLogin();return}localStorage.setItem('maxi_nickname',n);document.getElementById('loginmsg').textContent='Welcome, '+n+'! Demo profile saved in this browser.'}
+let hits=0,attempts=0,active=false;function startPractice(){active=true;document.getElementById('trainmsg').textContent='Practice is on! Tap the target.';moveTarget()}function moveTarget(){const t=document.getElementById('target');t.style.transform=`translate(${Math.random()*70-35}px,${Math.random()*20-10}px)`;t.textContent=['🎯','🔴','🎯'][Math.floor(Math.random()*3)]}function hit(){if(!active){document.getElementById('trainmsg').textContent='Press Start Practice first.';return}hits++;attempts++;updateStats();document.getElementById('trainmsg').textContent='Nice! Keep practising.';moveTarget()}function resetPractice(){hits=0;attempts=0;active=false;updateStats();document.getElementById('trainmsg').textContent='Press Start Practice to begin.';document.getElementById('target').style.transform='none'}function updateStats(){document.getElementById('hits').textContent=hits;document.getElementById('attempts').textContent=attempts;document.getElementById('accuracy').textContent=(attempts?Math.round(hits/attempts*100):0)+'%'}
+function saveSettings(){const data={profile:document.getElementById('profile').value,values:defaults.map((_,i)=>document.getElementById('r'+i).value)};localStorage.setItem('maxi_settings',JSON.stringify(data));document.getElementById('savemsg').textContent='Saved in this browser.'}function loadSettings(){try{const d=JSON.parse(localStorage.getItem('maxi_settings'));if(!d)throw 0;document.getElementById('profile').value=d.profile;d.values.forEach((v,i)=>{document.getElementById('r'+i).value=v;document.getElementById('v'+i).textContent=v});document.getElementById('savemsg').textContent='Saved profile loaded.'}catch(e){document.getElementById('savemsg').textContent='No saved profile found yet.'}}
+const nick=localStorage.getItem('maxi_nickname');if(nick){document.getElementById('username').value=nick;document.getElementById('loginmsg').textContent='Welcome back, '+nick+'.'}loadSettings();
+</script>
+</body></html>
